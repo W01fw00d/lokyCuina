@@ -1,0 +1,41 @@
+{% extends 'main_wrapper.html.twig' %}
+
+{% block body %}
+<div id="wrapper" class="container-grey">
+    <div id="container" class="title-wrapper">
+        <div class="row">
+            {% block baseHeader %}{% endblock %}
+        </div>
+    </div>
+
+    <div class="row form-wrapper">
+        <div class="col-sm-5">
+            <header>
+                <h2>
+                    Use this form to interact with the Database
+                </h2>
+            </header>
+
+            <div class="form-container">
+                {% block form %}{% endblock %}
+            </div>
+        </div>
+        
+        <div class="col-sm-7">
+            <div class="results-wrapper">
+                <h2>
+                    Results:
+                </h2>
+
+                <div class="submit-errors"> {{ errors }} </div>
+                <div class="submit-results submit_results" data-results="{{ results }}"></div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link href="{{ asset('css/form.css') }}" rel="stylesheet" />
+{% endblock %}

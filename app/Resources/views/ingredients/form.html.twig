@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+{% form_theme form 'fields.html.twig' %}
+
+{% block baseHeader %}
+    <img class="header-img col-sm-4" src="{{ asset('imgs/ingredients.png') }}"/>
+    <h1 class="form-title col-sm-8"> Ingredients </h1>
+{% endblock %}
+
+{% block form %}
+<div>
+    {{ form_start(form) }}
+    {{ form_errors(form) }}
+
+    {{ form_row(form.action) }}
+
+    {{ form_row(form.name) }}
+    
+    <div id="new" class="form-step hidden">
+        {{ form_row(form.description) }}
+    </div>
+
+    <div>
+        {{ form_widget(form.save) }}
+    </div>
+
+    <div class="optional_label optional-label"> * Optional </div>
+
+    {{ form_end(form) }}
+</div>
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script src="{{ asset('js/ingredientsForm.js') }}"></script> 
+{% endblock %}

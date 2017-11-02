@@ -1,0 +1,70 @@
+.form-step {
+    padding-bottom: 30px;
+}
+
+.form-row {
+    padding-bottom: 20px;
+}
+
+.form-container {
+    padding: 0 20px 0 0;
+}
+
+.row.form-wrapper {
+    margin: 0;
+}
+
+.title-wrapper {
+    padding: 20px 0 30px 55px;
+}
+
+.form-apply-label {
+    margin-top: 0;
+}
+
+.step-button {
+    cursor: pointer;
+    padding-right: 20px;
+}
+
+.optional-label {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.list-wrapper {
+    padding: 0 40px;
+}
+
+.form-button {
+    display: inline-block;
+    color: #444;
+    border: 1px solid #CCC;
+    background: #DDD;
+    box-shadow: 0 0 5px -1px rgba(0,0,0,0.2);
+    cursor: pointer;
+    vertical-align: middle;
+    max-width: 100px;
+    padding: 5px;
+    text-align: center;
+}
+
+.form-button:active {
+    box-shadow: 0 0 5px -1px rgba(0,0,0,0.6);
+}
+
+.submit-results {
+    color: green;
+}
+
+.submit-errors {
+    color: brown
+}
+
+.result-item {
+    padding-bottom: 20px;
+}
+
+.results-wrapper {
+    padding: 0 40px;
+}

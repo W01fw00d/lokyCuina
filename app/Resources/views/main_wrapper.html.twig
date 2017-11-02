@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Sa Cuina de na Loky!</title>
+        {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
+        <link rel="stylesheet" href="{{ asset('css/main.css') }}" />
+        {% endblock %}
+
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        <nav id="main-navbar" class="navbar navbar-custom container">
+            <img class="header-img col-sm-4" src="{{ asset('imgs/owl.png') }}" alt="Sa Cuina de na Loky!" title="Sa Cuina de na Loky!" />
+
+            <div class="container col-sm-8 page-title-wrapper">
+                <div class="page-title">
+                    Sa Cuina de na Loky!
+                </div>
+            </div>
+            
+            <nav id="secondary-navbar" class="active col-sm-12">
+                <ul class="secondary-navbar-list">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/recipes">Recipes</a></li>
+                    <li><a href="/ingredients">Ingredients</a></li>
+                </ul>
+            </nav>
+        </nav>
+
+        {% block body %}{% endblock %}
+
+        {% block javascripts %}
+        <script src="{{ asset('js/jquery.min.js') }}"></script>
+        <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+        {% endblock %}
+
+    </body>
+</html>
